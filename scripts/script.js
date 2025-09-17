@@ -1,32 +1,33 @@
 function aggiornaImmagine() {
-    var mete = document.getElementsByName("mete");
-    for(var i < mete.length){
+    let scelta = document.getElementById("mete").value;
 
+    // Associo le mete agli ID delle immagini
+    let immagini = {
+        praga: "img1",
+        andalusia: "img2",
+        barcellona: "img3",
+        berlino: "img4",
+        parigi: "img5"
+    };
+
+    // Nascondo tutte le immagini
+    for (let meta in immagini) {
+        document.getElementById(immagini[meta]).style.display = "none";
     }
 
-    // Nasconde tutte le immagini
-    document.getElementById("img1").style.display = "none";
-    document.getElementById("img2").style.display = "none";
-    document.getElementById("img3").style.display = "none";
-    document.getElementById("img4").style.display = "none";
-    document.getElementById("img5").style.display = "none";
+    // Mostro solo quella scelta
+    document.getElementById(immagini[scelta]).style.display = "block";
+}
 
-    // Mostra solo quella corretta
-    switch (mete) {
-        case "Praga":
-            document.getElementById("img1").style.display = "block";
-            break;
-        case "Andalusia":
-            document.getElementById("img2").style.display = "block";
-            break;
-        case "Barcellona":
-            document.getElementById("img3").style.display = "block";
-            break;
-        case "Berlino":
-            document.getElementById("img4").style.display = "block";
-            break;
-        case "Parigi":
-            document.getElementById("img5").style.display = "block";
-            break;
-    }
+function apriWiki(citta) {
+    let links = {
+        praga: "https://it.wikipedia.org/wiki/Praga",
+        andalusia: "https://it.wikipedia.org/wiki/Andalusia",
+        barcellona: "https://it.wikipedia.org/wiki/Barcellona",
+        berlino: "https://it.wikipedia.org/wiki/Berlino",
+        parigi: "https://it.wikipedia.org/wiki/Parigi"
+    };
+
+    // Apre la pagina in una nuova scheda
+    window.open(links[citta], "_blank");
 }
