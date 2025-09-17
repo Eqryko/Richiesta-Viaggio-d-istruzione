@@ -8,6 +8,7 @@
         <meta charset="UTF-8">
         <meta name="author" content="Refosco Enrico">
         <link rel="stylesheet" href="scripts/general.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <div class="Nav">
@@ -26,18 +27,19 @@
                 <!-- Elenco partecipanti <input type="" -->
                 Data e Ora di partenza <input type="date" name="Data"> <input type="time" name="Ora"><br>
                 Preferenze meta: 
-                <fieldset class="field">
-                    Praga <input type="radio" name="meta" value="Praga" checked><br>
-                    Andalusia <input type="radio" name="meta" value="Andalusia"><br>
-                    Barcellona <input type="radio" name="meta" value="Barcellona"><br>
-                    Berlino <input type="radio" name="meta" value="Berlino"><br>
-                    Parigi <input type="radio" name="meta" value="Parigi"><br>
-                </fieldset>
-                <img src="media/Andalusia.jpg">
-                <img src="media/Praga.jpg">
-                <img src="media/Barcellona.jpg">
-                <img src="media/Berlino.jpg">
-                <img src="media/Parigi.jpg">
+                <select id="mete" name="mete">
+                    <option value="praga">Praga</option>
+                    <option value="andalusia">Andalusia</option>
+                    <option value="barcellona">Barcellona</option>
+                    <option value="berlino">Berlino</option>
+                    <option value="parigi">Parigi</option>
+                </select>
+    
+                <img id="img1" src="media/Praga.jpg" style="display: block;">
+                <img id="img2" src="media/Andalusia.jpg" style="display: none;">
+                <img id="img3" src="media/Barcellona.jpg" style="display: none;">
+                <img id="img4" src="media/Berlino.jpg" style="display: none;">
+                <img id="img5" src="media/Parigi.jpg" style="display: none;">
                 
                 
                 
