@@ -1,38 +1,32 @@
 function aggiornaImmagine() {
-    var radios = document.getElementsByName("meta");
-    var valoreSelezionato;
+    var mete = document.getElementsByName("mete");
+    for(var i < mete.length){
 
-    // radio 
-    for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked) {
-            valoreSelezionato = radios[i].value;
-            break;
-        }
     }
 
     // Nasconde tutte le immagini
-    document.getElementById("img1").style.visibility = "hidden";
-    document.getElementById("img2").style.visibility = "hidden";
-    document.getElementById("img3").style.visibility = "hidden";
-    document.getElementById("img4").style.visibility = "hidden";
-    document.getElementById("img5").style.visibility = "hidden";
+    document.getElementById("img1").style.display = "none";
+    document.getElementById("img2").style.display = "none";
+    document.getElementById("img3").style.display = "none";
+    document.getElementById("img4").style.display = "none";
+    document.getElementById("img5").style.display = "none";
 
     // Mostra solo quella corretta
-    switch (valoreSelezionato) {
+    switch (mete) {
         case "Praga":
-            document.getElementById("img1").style.visibility = "visible";
+            document.getElementById("img1").style.display = "block";
             break;
         case "Andalusia":
-            document.getElementById("img2").style.visibility = "visible";
+            document.getElementById("img2").style.display = "block";
             break;
         case "Barcellona":
-            document.getElementById("img3").style.visibility = "visible";
+            document.getElementById("img3").style.display = "block";
             break;
         case "Berlino":
-            document.getElementById("img4").style.visibility = "visible";
+            document.getElementById("img4").style.display = "block";
             break;
         case "Parigi":
-            document.getElementById("img5").style.visibility = "visible";
+            document.getElementById("img5").style.display = "block";
             break;
     }
 }
