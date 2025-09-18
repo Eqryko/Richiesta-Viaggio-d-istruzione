@@ -133,3 +133,11 @@ footer i {
     font-style: normal;
     color: #bbb;
 }
+
+hr {
+    height: 3px;
+    color: #1bb65f;
+    background: #1bb65f;
+    font-size: 0;
+    border: 0;
+}
