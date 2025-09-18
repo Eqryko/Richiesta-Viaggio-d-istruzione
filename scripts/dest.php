@@ -1,4 +1,5 @@
 <?php
+// per caricare il php mettere la cartella del progetto su Disco Locale(C:)/xampp/htdocs
 // Controllo se il form è stato inviato
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -25,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p><b>Data e Ora:</b> $data $ora</p>";
     echo "<p><b>Meta scelta:</b> $meta</p>";
 
+    // errore
     echo "<p><b>Mezzi selezionati:</b> ";
     if (!empty($mezzi)) {
         echo implode(", ", $mezzi);
